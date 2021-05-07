@@ -4,9 +4,6 @@ export default class StringCalculator {
       return 0;
     }
 
-    if (input === "1,1") {
-      return 2;
-    }
-    return 1;
+    return Number(input);
   }
 }
