@@ -44,6 +44,7 @@ describe("String calculator", () => {
   it.each([
     ["1\n2,3", 6],
     ["1\n2\n3,4", 10],
+    ["1,2\n3,5", 11],
   ])("given %s should return %i", (stringInput, expected) => {
     const stringCalculator: StringCalculator = new StringCalculator();
     expect(stringCalculator.add(stringInput)).toBe(expected);
