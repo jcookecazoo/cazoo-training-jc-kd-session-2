@@ -4,14 +4,10 @@ export default class StringCalculator {
       return 0;
     }
 
-    if (input === "1,1") {
-      return 2;
-    }
+    const stringNumbers = input.split(",");
 
-    if (input === "5,11") {
-      return 16;
-    }
+    if (stringNumbers.length === 1) return Number(stringNumbers[0]);
 
-    return Number(input);
+    return Number(stringNumbers[0]) + Number(stringNumbers[1]);
   }
 }

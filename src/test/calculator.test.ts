@@ -15,18 +15,17 @@ describe("String calculator", () => {
     expect(stringCalculator.add(stringInput)).toBe(expected);
   });
 
-  it("should return 2 for '1,1'", () => {
+  it.each([
+    ["1,1", 2],
+    ["5,11", 16],
+    ["0,8", 8],
+  ])("given %i should return %i", (stringInput, expected) => {
     const stringCalculator: StringCalculator = new StringCalculator();
-    expect(stringCalculator.add("1,1")).toBe(2);
+    expect(stringCalculator.add(stringInput)).toBe(expected);
   });
 
-  it("should return 16 for '5,11'", () => {
+  it("given '1,1,1' should return 3", () => {
     const stringCalculator: StringCalculator = new StringCalculator();
-    expect(stringCalculator.add("5,11")).toBe(16);
-  });
-
-  it("should return 8 for '0,8'", () => {
-    const stringCalculator: StringCalculator = new StringCalculator();
-    expect(stringCalculator.add("0,8")).toBe(8);
+    expect(stringCalculator.add("1,1,1")).toBe(3);
   });
 });
