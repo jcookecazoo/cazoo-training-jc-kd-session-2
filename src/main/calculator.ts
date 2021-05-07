@@ -5,13 +5,12 @@ export default class StringCalculator {
     }
 
     const stringNumbers = input.split(",");
+    let sum = 0;
 
-    if (stringNumbers.length === 1) return Number(stringNumbers[0]);
+    stringNumbers.forEach(stringNumber => {
+        sum = sum + Number(stringNumber);
+    })
 
-    if (stringNumbers.length === 2) {
-        return Number(stringNumbers[0]) + Number(stringNumbers[1]);
-    }
-
-    return Number(stringNumbers[0]) + Number(stringNumbers[1]) + Number(stringNumbers[2]);
+    return sum;
   }
 }
