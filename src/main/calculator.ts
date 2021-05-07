@@ -4,15 +4,7 @@ export default class StringCalculator {
       return 0;
     }
 
-    if (input === "1\n2,3") {
-      return 6;
-    }
-
-    if (input === "1\n2\n3,4") {
-      return 10;
-    }
-
-    const stringNumbers = input.split(",");
+    const stringNumbers = input.split(/[\n,]/);
     let sum = 0;
 
     stringNumbers.forEach((stringNumber) => {
