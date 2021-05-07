@@ -1,5 +1,5 @@
-export class Example {
-    add(a: number, b: number) {
-        return a + b;
+export default class StringCalculator {
+    add(input: string): number {
+        return 0;
     }
 }
