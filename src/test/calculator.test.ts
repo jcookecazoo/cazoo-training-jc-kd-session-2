@@ -10,7 +10,7 @@ describe("String calculator", () => {
     ["1", 1],
     ["2", 2],
     ["3", 3],
-  ])('given %i should return %i', (stringInput, expected) => {
+  ])("given %i should return %i", (stringInput, expected) => {
     const stringCalculator: StringCalculator = new StringCalculator();
     expect(stringCalculator.add(stringInput)).toBe(expected);
   });
@@ -25,5 +25,8 @@ describe("String calculator", () => {
     expect(stringCalculator.add("5,11")).toBe(16);
   });
 
-
+  it("should return 8 for '0,8'", () => {
+    const stringCalculator: StringCalculator = new StringCalculator();
+    expect(stringCalculator.add("0,8")).toBe(8);
+  });
 });
