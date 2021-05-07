@@ -33,4 +33,9 @@ describe("String calculator", () => {
     const stringCalculator: StringCalculator = new StringCalculator();
     expect(stringCalculator.add("2,2,2")).toBe(6);
   });
+
+  it("given '2,3,4' should return 9", () => {
+    const stringCalculator: StringCalculator = new StringCalculator();
+    expect(stringCalculator.add("2,3,4")).toBe(9);
+  });
 });
