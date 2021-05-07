@@ -49,4 +49,11 @@ describe("String calculator", () => {
     const stringCalculator: StringCalculator = new StringCalculator();
     expect(stringCalculator.add(stringInput)).toBe(expected);
   });
+  it.each([["//;\n1;2", 3]])(
+    "given %s should return %i",
+    (stringInput, expected) => {
+      const stringCalculator: StringCalculator = new StringCalculator();
+      expect(stringCalculator.add(stringInput)).toBe(expected);
+    }
+  );
 });
