@@ -19,4 +19,11 @@ describe("String calculator", () => {
     const stringCalculator: StringCalculator = new StringCalculator();
     expect(stringCalculator.add("1,1")).toBe(2);
   });
+
+  it("should return 16 for '5,11'", () => {
+    const stringCalculator: StringCalculator = new StringCalculator();
+    expect(stringCalculator.add("5,11")).toBe(16);
+  });
+
+
 });
