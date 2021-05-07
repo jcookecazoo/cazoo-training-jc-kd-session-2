@@ -28,4 +28,9 @@ describe("String calculator", () => {
     const stringCalculator: StringCalculator = new StringCalculator();
     expect(stringCalculator.add("1,1,1")).toBe(3);
   });
+
+  it("given '2,2,2' should return 6", () => {
+    const stringCalculator: StringCalculator = new StringCalculator();
+    expect(stringCalculator.add("2,2,2")).toBe(6);
+  });
 });
