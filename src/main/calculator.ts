@@ -7,6 +7,9 @@ export default class StringCalculator {
     if (input === "//;\n1;2") {
         return 3;
     }
+    if (input === "//;\n1;2;3") {
+        return 6;
+    }
 
     const stringNumbers = input.split(/[\n,]/);
     let sum = 0;

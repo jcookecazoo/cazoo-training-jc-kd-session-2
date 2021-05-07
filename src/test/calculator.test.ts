@@ -52,7 +52,8 @@ describe("String calculator", () => {
 
   it.each([
       ["//;\n1;2", 3],
-      ["//;\n1;2;3", 6]
+      ["//;\n1;2;3", 6],
+      ["//!\n1!2!4", 7]
   ])(
     "given %s should return %i",
     (stringInput, expected) => {
